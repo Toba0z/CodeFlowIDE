@@ -7,7 +7,7 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import LANGUAGE_VERSIONS from "../../constants";
+import { LANGUAGE_VERSIONS } from "../../constants";
 
 const SelectLanguage = ({ language, onSelect }) => {
   const listOfLanguage = Object.entries(LANGUAGE_VERSIONS);

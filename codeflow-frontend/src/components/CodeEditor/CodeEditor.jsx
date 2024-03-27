@@ -35,7 +35,7 @@ const CodeEditor = () => {
             onChange={(value) => setValue(value)}
           />
         </Box>
-        <CodeOutput />
+        <CodeOutput editorReference = {editorReference} language={language} />
       </HStack>
     </Box>
   );
