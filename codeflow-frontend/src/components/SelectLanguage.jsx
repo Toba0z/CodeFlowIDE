@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Text,
@@ -6,8 +7,9 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Flex,
 } from "@chakra-ui/react";
-import { LANGUAGE_VERSIONS } from "../../constants";
+import { LANGUAGE_VERSIONS } from "../app/constants";
 
 const SelectLanguage = ({ language, onSelect }) => {
   const listOfLanguage = Object.entries(LANGUAGE_VERSIONS);
@@ -18,6 +20,7 @@ const SelectLanguage = ({ language, onSelect }) => {
         Language:
       </Text>
       <Menu isLazy>
+      <Flex align="center" justify="flex-start" mb={4} gap={3}>
         <MenuButton bg="grey" as={Button}>
           {language}
         </MenuButton>
@@ -41,6 +44,14 @@ const SelectLanguage = ({ language, onSelect }) => {
             </MenuItem>
           ))}
         </MenuList>
+        
+          <Button variant="outline" colorScheme="green" mr={4}>
+            Previous
+          </Button>
+          <Button variant="outline" colorScheme="green">
+            Next
+          </Button>
+        </Flex>
       </Menu>
     </Box>
   );
